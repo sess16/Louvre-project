@@ -20,11 +20,24 @@ class DefaultController extends Controller
 {
     /**
      * @return Response
-     * @Route("/", name="index")
+     * @Route("/", name="homepage")
      * @Method("GET")
      */
     public function indexAction()
     {
         return $this->render('Default/index.html.twig');
+    }
+
+    /**
+     * @param $name
+     * @return Response
+     * @Route("/hello/{name}", name="hello")
+     * @Method("GET")
+     */
+    public function helloAction($name)
+    {
+        return $this->render('Default/hello.html.twig', array(
+            'name' => $name
+        ));
     }
 }
