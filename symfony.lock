@@ -65,9 +65,6 @@
     "symfony/class-loader": {
         "version": "v3.3.13"
     },
-    "symfony/polyfill-apcu": {
-        "version": "v1.6.0"
-    },
     "psr/simple-cache": {
         "version": "1.0.0"
     },
@@ -158,12 +155,6 @@
     "symfony/twig-bridge": {
         "version": "v3.3.13"
     },
-    "paragonie/random_compat": {
-        "version": "v2.0.11"
-    },
-    "symfony/polyfill-php70": {
-        "version": "v1.6.0"
-    },
     "symfony/web-profiler-bundle": {
         "version": "3.3",
         "recipe": {
@@ -238,5 +229,11 @@
     },
     "symfony/orm-pack": {
         "version": "v1.0.4"
+    },
+    "symfony/polyfill-php72": {
+        "version": "v1.6.0"
+    },
+    "symfony/asset": {
+        "version": "v4.0.0"
     }
 }
