@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Commande
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css">
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-sm-4">
+            {% include('Default/prices.html.twig') %}
+        </div>
+        <div class="col-sm-8 order-ticket">
+            <h1>Votre billet</h1>
+            {{ form_start(orderForm) }}
+            <div class="row">
+                {{ form_errors(orderForm) }}
+                <div class="col-md-4">
+                    {{ form_row(orderForm.venueDate) }}
+                </div>
+                <div class="col-md-4">
+                    {{ form_row(orderForm.customerEmail) }}
+                </div>
+                <div class="col-md-4">
+                    {{ form_row(orderForm.duration) }}
+                </div>
+            </div>
+            <h3>Vos Tickets</h3>
+            <div class="row js-order-item-wrapper"
+                 data-prototype="{{ formMacros.printItemRow(orderForm.items.vars.prototype)|e('html_attr') }}"
+                 data-index="{{ orderForm.items|length }}">
+                {% for itemForm in orderForm.items %}
+                    {{ formMacros.printItemRow(itemForm) }}
+                {% endfor %}
+            </div>
+            <div class="row text-center"><a href="#" class="btn btn-success js-item-add">
+                    <span class="glyphicon glyphicon-plus-sign"></span> Ajouter un ticket</a>
+            </div>
+            {{ form_widget(orderForm.items) }}
+            <div class="text-center">
+                <button id="submit" type="submit" class="btn btn-lg btn-primary" formnovalidate>Validation de votre commande</button>
+            </div>
+            {{ form_end(orderForm) }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/locales/bootstrap-datepicker.fr.min.js">
+    </script>
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script src="{{ asset('js/louvreorder.js') }}"></script>
+{% endblock %}

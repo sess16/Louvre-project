@@ -1,0 +1,270 @@
+/*
+    CSS FILE for LE LOUVRE
+
+    sections :
+    1- Font Family
+    2- Main Section
+    3- Welcome Page
+
+ */
+
+/*
+            1 - FONT FAMILY
+ */
+@font-face {
+    font-family: 'AbrilFatface';
+    src: url('../fonts/AbrilFatface-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PT_Sans-Web';
+    src: url('../fonts/PT_Sans-Web-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'PT_Sans-Web';
+    src: url('../fonts/PT_Sans-Web-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'PT_Sans-Web';
+    src: url('../fonts/PT_Sans-Web-BoldItalic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'PT_Sans-Web';
+    src: url('../fonts/PT_Sans-Web-Italic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/Bitter-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/Bitter-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/Bitter-Italic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 400;
+}
+
+/*
+            2 - MAIN SECTION
+ */
+body {
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #000016;
+    font-family: 'PT_Sans-Web', Verdana, Geneva, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar-brand > img {
+    margin-top: -10px;
+}
+
+.well {
+    background: #ccccff;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    color: #9d9d9d;
+    background-color: #222;
+    font-size: 0.8em;
+    text-align: center;
+    clear: both;
+    border-radius: 4px;
+}
+
+/*
+            3 - WELCOME PAGE
+ */
+.jumbotron {
+    background: url("../images/le-louvre-1200x800.jpg") no-repeat 0 -200px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.jumbotron h1 {
+    font-family: 'AbrilFatface', 'Times New Roman', Serif;
+    letter-spacing: 0.2em;
+}
+
+.jumbotron p {
+    font-size: 1em;
+}
+
+
+section.presentation {
+    color: #FFFFFF;
+}
+
+.presentation .col-lg-4 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.presentation h2 {
+    text-transform: uppercase;
+}
+
+.presentation h3 {
+    font-weight: normal;
+    font-family: 'Bitter', 'Times New Roman', Serif;
+}
+
+.presentation .col-lg-4 p {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/**
+            4 - ORDER PAGE
+ */
+div.prices {
+    font-size: 0.7em;
+}
+
+.prices table {
+    font-size: 0.9em;
+}
+
+.order-ticket {
+    color: #FFFFFF;
+}
+
+.js-order-item {
+    width: 100%;
+}
+
+label {
+    font-weight: normal;
+}
+
+.form-group {
+    font-size: .8em;
+}
+
+.reduced-warning {
+    color: #99CDD8;
+    font-size: 0.7em;
+}
+
+.js-order-item {
+    border-bottom: 1px solid #0088CC;
+    margin: 10px auto;
+    padding-bottom: 10px;
+}
+
+.price-table tbody tr:nth-child(even) {
+    background: #ffffe6;
+}
+
+.price-table tbody tr:nth-child(odd) {
+    background: #ccffe6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-details {
+    margin: 20px auto;
+}
+
+.order-details tbody tr:nth-child(even) {
+    background: #330000;
+}
+
+.order-details tbody tr:nth-child(odd) {
+    background: #260033;
+}
+
+.js-item-add {
+    margin: 20px auto;
+}
+
+/*
+            5 - INFOS PAGE
+ */
+.infos {
+    color: #FFFFFF;
+}
+/*
+            6 - ERROR PAGE
+ */
+
+.error-not-found {
+    background: url("../images/louvre-basement-1200x736.jpg") no-repeat 0 -100px;
+    text-align: center;
+    color: #ffffff;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 12px;
+    padding: 20px 10px;
+}
+
+.error-not-found h2 {
+    font-family: 'Bitter', 'Times New Roman', Serif;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+}
+.error-not-found p {
+    font-size: 1.1em;
+    margin: 20px 0 20px 0;
+}
+/*
+            6 - MEDIA RANGE
+ */
+@media (min-width: 768px) {
+    .jumbotron h1 {
+        letter-spacing: 0.4em;
+    }
+
+    .jumbotron p {
+        font-size: 1.6em;
+    }
+
+    .presentation .col-lg-4 p {
+        text-align: justify;
+    }
+
+    .well {
+        font-size: 1.2em;
+    }
+
+    div.prices {
+        font-size: 0.8em;
+    }
+
+    .js-order-item {
+        border: 1px solid #0088CC;
+        margin: 10px;
+        border-radius: 4px;
+        padding: 5px;
+    }
+}

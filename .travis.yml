@@ -1,1 +1,11 @@
 language: php
+php:
+- 7.1
+git:
+  depth: 1
+env:
+- SYMFONY_VERSION="3.3.*" DB=mysql
+before_script:
+- composer require symfony/framework-bundle:${SYMFONY_VERSION}
+script:
+- vendor/bin/phpunit

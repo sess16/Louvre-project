@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Infos pratiques
+{% endblock %}
+
+{% block body %}
+    <div class="row infos">
+        <div class="col-md-8">
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.871485445673!2d2.336185316049847!3d48.86066097928775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb975fcfa192f84d4!2sMus%C3%A9e+du+Louvre!5e0!3m2!1sfr!2sfr!4v1501939083354"
+                        frameborder="0" style="border:0;width:100%;height:350px;" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h1>Où nous trouver ?</h1>
+            <p><strong>Adresse :</strong><br/>
+                Musée du Louvre, Rue de Rivoli, 75001 Paris - France</p>
+            <p><strong>Téléphone :</strong><br/>
+                + 33 (0)1 40 20 53 17</p>
+            <p><strong>Métro :</strong><br/>
+                lignes 1 station Palais-Royal/musée du Louvre
+            </p>
+            <p><strong>Bus :</strong><br/>
+                bus n° 21,24,27,39,48,68,69,72,81,95
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="well text-center">
+                Achetez votre billet en ligne : votre entrée en moins de trente minutes garantie
+            </div>
+        </div>
+    </div>
+    <div class="row infos">
+        <div class="col-md-4">
+            <h2>Visiteurs munis de billets</h2>
+            <p>Les visiteurs avec un billet ou un Paris Museum Pass ont un accès par
+                l'entrée de la Pyramide avec une file prioritaire.</p>
+            <p>L'accès est privilégié par le passage Richelieu, pour les porteurs de cartes :
+                Amis du Louvre, carte Amis du Louvre jeunes, carte Louvre professionnels, mécènes.</p>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4">
+            <h2>Horaires</h2>
+            <p>Ouvert tous les jours de 9h à 18h sauf le mardi.<br/>Nocturnes jusqu’à 21h45 le
+                mercredi et le vendredi.</p>
+            <p><strong>Fermetures :</strong><br/>
+                les 1er mai, 14 juillet et 25 décembre.</p>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4">
+            <h2>Audioguide</h2>
+            <p>Partez à la découverte du Louvre guidés par les spécialistes du musée.
+                Conservateurs et conférenciers vous font partager avec enthousiasme
+                leur connaissance des œuvres et du palais du Louvre.</p>
+        </div>
+        <!-- /.col-md-4 -->
+    </div>
+{% endblock %}

@@ -1,9 +1,58 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Index
+    {{ parent() }} - Bienvenue
 {% endblock %}
 
 {% block body %}
-    <h1>Tout fonctionne</h1>
+    <div class="jumbotron welcome">
+        <h1>Evitez l'attente</h1>
+        <p>Grâce à notre billetterie en ligne, évitez les files d'attente le jour de votre visite, en achetant
+            dès aujourd'hui vos billets, directement sur notre site...
+        </p>
+        <p><a class="btn btn-lg btn-info" href="{{ path('index') }}" role="button">Achetez votre billet</a></p>
+    </div>
+    <section class="presentation">
+        <h2 class="text-center">
+            Nos expositions du moment
+        </h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="img-circle"
+                     src="{{ asset('images/palais-dumond-160x160.jpg') }}"
+                     alt="image d'une stèle funéraire"/>
+                <h3>Languedoc et Romains</h3>
+                <p>Découvrez les oeuvres magnifiques laissées par les romains lors de
+                    leur passage dans le Languedoc. Cette somptueuse collection nous a été prêtée
+                    par le musée de Bellerive La Romaine : Le Palais Dumond. Cette exposition nous propose de
+                    découvrir le quotidien de ces femmes et hommes.</p>
+                <a class="btn btn-primary" href="http://www.bellerive.iiidees.com/louvre-expose-palais-dumond/"
+                   role="button" title="Le Palais Dumond à Bellerive La Romaine">Plus d'infos &raquo;</a>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="img-circle"
+                     src="{{ asset('images/renaissance-italienne-160x160.jpg') }}"
+                     alt="image de la La Nativité avec les Saints, par Lazzaro Bastiani"/>
+                <h3>Peinture Italienne</h3>
+                <p>Le département des Peintures répond à la dimension encyclopédique du musée
+                    avec des œuvres représentatives de toutes les écoles de peinture européennes,
+                    du 13e siècle à 1848. L'étude et la mise en valeur des collections
+                    sont confiées à douze conservateurs, parmi les plus grands spécialistes.</p>
+                <a class="btn btn-primary"
+                   href="http://www.louvre.fr/departments/peintures/oeuvres-choisies?dep=159&title=&subdep=166"
+                   role="button" title="La peinture Italienne au Louvre">Plus d'infos &raquo;</a>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="img-circle"
+                     src="{{ asset('images/delacroix-160x160.jpg') }}"
+                     alt="Reproduction de la prise de Constantinople par les Croisés, peint par Delacroix"/>
+                <h3>Eugène Delacroix</h3>
+                <p>Eugène Delacroix est un peintre français considéré comme le principal représentant du romantisme,
+                    dont la vigueur correspond à l'étendue de sa carrière. Il a peint sur toile et décoré les murs
+                    et plafonds de monuments publics. Découvrez un musée qui lui est consacré.</p>
+                <a class="btn btn-primary" href="http://www.louvre.fr/departments/musee-nationaleugene-delacroix"
+                   role="button" title="Visitez le Musée national Eugène-Delacroix">Plus d'infos</a>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </section>
 {% endblock %}
