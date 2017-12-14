@@ -1,3 +1,38 @@
+{% import _self as formMacros %}
+
+{% macro printItemRow(itemForm) %}
+    <div class="col-md-12 js-order-item">
+        {{ form_errors(itemForm) }}
+        <div class="row">
+            <div class="col-md-4">
+                {{ form_row(itemForm.firstName) }}
+            </div>
+            <div class="col-md-4">
+                {{ form_row(itemForm.lastName) }}
+            </div>
+            <div class="col-md-4">
+                {{ form_row(itemForm.birthDate) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                {{ form_row(itemForm.country) }}
+            </div>
+            <div class="col-md-5">
+                {{ form_row(itemForm.reducedRate) }}
+                <p class="reduced-warning">Afin d'éviter un refus d'entrée, veuillez prendre
+                    la carte qui vous permet de bénéficier du tarif réduit lors de votre visite.</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <br>
+                <a href="#" class="btn btn-danger js-remove-item">
+                    <span class="glyphicon glyphicon-remove-circle"></span> Supprimer ticket
+                </a>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
 {% extends 'base.html.twig' %}
 
 {% block title %}

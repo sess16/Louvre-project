@@ -19,10 +19,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class OrderController extends Controller
 {
+    const MAXIMUM_TICKET = 1000;
+
     /**
      * @return Response
      * @Route("/create", name="create")
-     * @Method("GET")
      */
     public function create()
     {
