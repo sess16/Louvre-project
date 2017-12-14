@@ -188,6 +188,15 @@
     "symfony/intl": {
         "version": "v4.0.1"
     },
+    "symfony/maker-bundle": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
+        }
+    },
     "symfony/options-resolver": {
         "version": "v4.0.1"
     },
@@ -242,6 +251,15 @@
             "ref": "8daf8ede72274989fb0dc66b83cb4bc1693afbb9"
         }
     },
+    "symfony/translation": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "6bcd6c570c017ea6ae5a7a6a027c929fd3542cd8"
+        }
+    },
     "symfony/twig-bridge": {
         "version": "v3.3.13"
     },
@@ -253,6 +271,9 @@
             "version": "3.3",
             "ref": "f75ac166398e107796ca94cc57fa1edaa06ec47f"
         }
+    },
+    "symfony/validator": {
+        "version": "v4.0.1"
     },
     "symfony/var-dumper": {
         "version": "v3.3.13"
