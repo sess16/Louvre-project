@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Confirmation de paiement
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-sm-4">
+            {% include('LouvreBundle:Order:prices.html.twig') %}
+        </div>
+        <div class="col-sm-8 order-ticket">
+            <h3>Merci de votre commande</h3>
+            <p>Un email vous a été envoyé avec le détail de votre commande. Imprimez ce mail, il vous servira pour
+                entrer au musée.</p>
+            <p>Nous vous souhaitons une bonne visite...</p>
+        </div>
+    </div>
+{% endblock %}
+
