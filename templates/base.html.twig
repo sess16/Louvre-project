@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <title>{% block title %}Le Louvre{% endblock %}</title>
         {% block stylesheets %}
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -39,7 +39,7 @@
                 {# message section #}
                 <div class="row">
                     <div class="col-sm-12">
-                        {#{% include '::flash-messages.html.twig' %}#}
+                        {#{% include 'Default/flash-messages.html.twig' %}#}
                     </div>
                 </div>
                 {# ENDOF message section #}
