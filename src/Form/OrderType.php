@@ -10,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class OrderFormType extends AbstractType
+class OrderType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -28,12 +28,12 @@ class OrderFormType extends AbstractType
                 'label' => 'Votre adresse email :'
             ])
             ->add('duration', EntityType::class,[
-                'class' => 'LouvreBundle\Entity\Duration',
+                'class' => 'App\Entity\Duration',
                 'choice_label' => 'name',
                 'label' => 'Type de ticket :'
             ])
             ->add('items', CollectionType::class, [
-                'entry_type' => ItemFormType::class,
+                'entry_type' => ItemType::class,
                 'allow_add' => true,
                 'allow_delete' => true
             ]);
@@ -42,7 +42,7 @@ class OrderFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => 'LouvreBundle\Entity\Order'
+            'data_class' => 'App\Entity\Order'
         ]);
     }
 

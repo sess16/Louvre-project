@@ -2,8 +2,8 @@
 
 namespace App\Form;
 
-use LouvreBundle\Entity\Country;
-use LouvreBundle\Repository\CountryRepository;
+use App\Entity\Country;
+use App\Repository\CountryRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ButtonType;
@@ -13,7 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ItemFormType extends AbstractType
+class ItemType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -34,7 +34,7 @@ class ItemFormType extends AbstractType
                 ]
             ])
             ->add('country', EntityType::class, [
-                'class' => 'LouvreBundle\Entity\Country',
+                'class' => 'App\Entity\Country',
                 'choice_label' => 'name',
                 'label' => 'Pays :',
                 'expanded' => false,
@@ -54,7 +54,7 @@ class ItemFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => 'LouvreBundle\Entity\Item'
+            'data_class' => 'App\Entity\Item'
         ]);
     }
 
