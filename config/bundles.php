@@ -12,4 +12,8 @@ return [
     Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle::class => ['all' => true],
     Knp\Bundle\MenuBundle\KnpMenuBundle::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
+<<<<<<< HEAD
+=======
+    FOS\JsRoutingBundle\FOSJsRoutingBundle::class => ['all' => true],
+>>>>>>> master
 ];

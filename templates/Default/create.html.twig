@@ -1,5 +1,6 @@
 {% import _self as formMacros %}
 
+<<<<<<< HEAD
 {% macro printItemRow(itemForm) %}
     <div class="col-md-12 js-order-item">
         {{ form_errors(itemForm) }}
@@ -12,14 +13,35 @@
             </div>
             <div class="col-md-4">
                 {{ form_row(itemForm.birthDate) }}
+=======
+{% macro printItemRow(item) %}
+    <div class="col-md-12 js-order-item">
+        {{ form_errors(item) }}
+        <div class="row">
+            <div class="col-md-4">
+                {{ form_row(item.firstName) }}
+            </div>
+            <div class="col-md-4">
+                {{ form_row(item.lastName) }}
+            </div>
+            <div class="col-md-4">
+                {{ form_row(item.birthDate) }}
+>>>>>>> master
             </div>
         </div>
         <div class="row">
             <div class="col-md-4">
+<<<<<<< HEAD
                 {{ form_row(itemForm.country) }}
             </div>
             <div class="col-md-5">
                 {{ form_row(itemForm.reducedRate) }}
+=======
+                {{ form_row(item.country) }}
+            </div>
+            <div class="col-md-5">
+                {{ form_row(item.reducedRate) }}
+>>>>>>> master
                 <p class="reduced-warning">Afin d'éviter un refus d'entrée, veuillez prendre
                     la carte qui vous permet de bénéficier du tarif réduit lors de votre visite.</p>
             </div>
@@ -51,35 +73,35 @@
         </div>
         <div class="col-sm-8 order-ticket">
             <h1>Votre billet</h1>
-            {{ form_start(orderForm) }}
+            {{ form_start(order) }}
             <div class="row">
-                {{ form_errors(orderForm) }}
+                {{ form_errors(order) }}
                 <div class="col-md-4">
-                    {{ form_row(orderForm.venueDate) }}
+                    {{ form_row(order.venueDate) }}
                 </div>
                 <div class="col-md-4">
-                    {{ form_row(orderForm.customerEmail) }}
+                    {{ form_row(order.customerEmail) }}
                 </div>
                 <div class="col-md-4">
-                    {{ form_row(orderForm.duration) }}
+                    {{ form_row(order.duration) }}
                 </div>
             </div>
             <h3>Vos Tickets</h3>
             <div class="row js-order-item-wrapper"
-                 data-prototype="{{ formMacros.printItemRow(orderForm.items.vars.prototype)|e('html_attr') }}"
-                 data-index="{{ orderForm.items|length }}">
-                {% for itemForm in orderForm.items %}
-                    {{ formMacros.printItemRow(itemForm) }}
+                 data-prototype="{{ formMacros.printItemRow(order.items.vars.prototype)|e('html_attr') }}"
+                 data-index="{{ order.items|length }}">
+                {% for item in order.items %}
+                    {{ formMacros.printItemRow(item) }}
                 {% endfor %}
             </div>
             <div class="row text-center"><a href="#" class="btn btn-success js-item-add">
                     <span class="glyphicon glyphicon-plus-sign"></span> Ajouter un ticket</a>
             </div>
-            {{ form_widget(orderForm.items) }}
+            {{ form_widget(order.items) }}
             <div class="text-center">
                 <button id="submit" type="submit" class="btn btn-lg btn-primary" formnovalidate>Validation de votre commande</button>
             </div>
-            {{ form_end(orderForm) }}
+            {{ form_end(order) }}
         </div>
     </div>
 {% endblock %}
