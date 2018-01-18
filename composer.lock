@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
+    "content-hash": "b3784e4936b7ed276add4316afc77065",
+=======
     "content-hash": "d3d66c8be56023acf562cc6af62bfe85",
+>>>>>>> master
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -2044,6 +2048,18 @@
         },
         {
             "name": "symfony/console",
+<<<<<<< HEAD
+            "version": "v4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "2ff6acc1342a0e7c3ad757a80fd837f5b22535a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/2ff6acc1342a0e7c3ad757a80fd837f5b22535a1",
+                "reference": "2ff6acc1342a0e7c3ad757a80fd837f5b22535a1",
+=======
             "version": "v4.0.3",
             "source": {
                 "type": "git",
@@ -2054,6 +2070,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/console/zipball/fe0e69d7162cba0885791cf7eea5f0d7bc0f897e",
                 "reference": "fe0e69d7162cba0885791cf7eea5f0d7bc0f897e",
+>>>>>>> master
                 "shasum": ""
             },
             "require": {
@@ -2108,7 +2125,11 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
+            "time": "2017-12-04T12:31:58+00:00"
+=======
             "time": "2018-01-03T07:38:00+00:00"
+>>>>>>> master
         },
         {
             "name": "symfony/debug",
@@ -3001,6 +3022,63 @@
             "time": "2017-12-04T17:50:28+00:00"
         },
         {
+            "name": "symfony/maker-bundle",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/maker-bundle.git",
+                "reference": "bf97703ddb68c6b37bd6bab5f5ebd5c7542ca1ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/bf97703ddb68c6b37bd6bab5f5ebd5c7542ca1ef",
+                "reference": "bf97703ddb68c6b37bd6bab5f5ebd5c7542ca1ef",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0.8",
+                "symfony/config": "^3.4|^4.0",
+                "symfony/console": "^3.4|^4.0",
+                "symfony/dependency-injection": "^3.4|^4.0",
+                "symfony/filesystem": "^3.4|^4.0",
+                "symfony/framework-bundle": "^3.4|^4.0",
+                "symfony/http-kernel": "^3.4|^4.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.8",
+                "symfony/phpunit-bridge": "^3.4|^4.0",
+                "symfony/process": "^3.4|^4.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bundle\\MakerBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "keywords": [
+                "code generator",
+                "generator",
+                "scaffold",
+                "scaffolding"
+            ],
+            "time": "2017-12-04T17:50:28+00:00"
+        },
+        {
             "name": "symfony/options-resolver",
             "version": "v4.0.3",
             "source": {
@@ -3601,6 +3679,18 @@
         },
         {
             "name": "symfony/translation",
+<<<<<<< HEAD
+            "version": "v4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/translation.git",
+                "reference": "317c2002180f64292ed127bbe31dcf47594c6ed7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/317c2002180f64292ed127bbe31dcf47594c6ed7",
+                "reference": "317c2002180f64292ed127bbe31dcf47594c6ed7",
+=======
             "version": "v4.0.3",
             "source": {
                 "type": "git",
@@ -3611,6 +3701,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation/zipball/2bb1b9dac38d32c5afb00edc9371b5db4cf6d000",
                 "reference": "2bb1b9dac38d32c5afb00edc9371b5db4cf6d000",
+>>>>>>> master
                 "shasum": ""
             },
             "require": {
@@ -3665,7 +3756,11 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
+            "time": "2017-11-28T22:05:27+00:00"
+=======
             "time": "2018-01-03T07:38:00+00:00"
+>>>>>>> master
         },
         {
             "name": "symfony/twig-bridge",
@@ -3913,6 +4008,90 @@
             "description": "Symfony Validator Component",
             "homepage": "https://symfony.com",
             "time": "2018-01-03T17:15:19+00:00"
+        },
+        {
+            "name": "symfony/validator",
+            "version": "v4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/validator.git",
+                "reference": "53437bd5a4b41674869358eb93a9a504420b2a84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/validator/zipball/53437bd5a4b41674869358eb93a9a504420b2a84",
+                "reference": "53437bd5a4b41674869358eb93a9a504420b2a84",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/translation": "~3.4|~4.0"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0",
+                "symfony/dependency-injection": "<3.4",
+                "symfony/http-kernel": "<3.4",
+                "symfony/yaml": "<3.4"
+            },
+            "require-dev": {
+                "doctrine/annotations": "~1.0",
+                "doctrine/cache": "~1.0",
+                "egulias/email-validator": "^1.2.8|~2.0",
+                "symfony/cache": "~3.4|~4.0",
+                "symfony/config": "~3.4|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/expression-language": "~3.4|~4.0",
+                "symfony/http-foundation": "~3.4|~4.0",
+                "symfony/http-kernel": "~3.4|~4.0",
+                "symfony/intl": "~3.4|~4.0",
+                "symfony/property-access": "~3.4|~4.0",
+                "symfony/var-dumper": "~3.4|~4.0",
+                "symfony/yaml": "~3.4|~4.0"
+            },
+            "suggest": {
+                "doctrine/annotations": "For using the annotation mapping. You will also need doctrine/cache.",
+                "doctrine/cache": "For using the default cached annotation reader and metadata cache.",
+                "egulias/email-validator": "Strict (RFC compliant) email validation",
+                "psr/cache-implementation": "For using the metadata cache.",
+                "symfony/config": "",
+                "symfony/expression-language": "For using the Expression validator",
+                "symfony/http-foundation": "",
+                "symfony/intl": "",
+                "symfony/property-access": "For accessing properties within comparison constraints",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Validator\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Validator Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-12-04T12:31:58+00:00"
         },
         {
             "name": "symfony/web-server-bundle",
@@ -4304,6 +4483,18 @@
         },
         {
             "name": "symfony/flex",
+<<<<<<< HEAD
+            "version": "v1.0.49",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/flex.git",
+                "reference": "c3980f5ac79fbe8ba6b0d747baf7e57925f04ae2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/c3980f5ac79fbe8ba6b0d747baf7e57925f04ae2",
+                "reference": "c3980f5ac79fbe8ba6b0d747baf7e57925f04ae2",
+=======
             "version": "v1.0.57",
             "source": {
                 "type": "git",
@@ -4314,6 +4505,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/flex/zipball/73423de7560c492f159aeb3eb9687b470bc87aec",
                 "reference": "73423de7560c492f159aeb3eb9687b470bc87aec",
+>>>>>>> master
                 "shasum": ""
             },
             "require": {
@@ -4346,7 +4538,11 @@
                     "email": "fabien.potencier@gmail.com"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2017-12-11T15:40:16+00:00"
+=======
             "time": "2018-01-03T11:28:30+00:00"
+>>>>>>> master
         },
         {
             "name": "symfony/polyfill-php72",
