@@ -203,7 +203,7 @@ class OrderController extends Controller
             ->setFrom('tickets@lelouvre.fr')
             ->setTo($order->getCustomerEmail())
             ->setBody(
-                $this->renderView('Default/Emails/sendticket.html.twig', [
+                $this->renderView('Default/sendticket.html.twig', [
                     'order' => $order,
                     'lines' => $lines,
                     'total' => $total_amount['total_price']
