@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}
     {{ parent() }} - Confirmation de paiement
@@ -7,7 +7,7 @@
 {% block body %}
     <div class="row">
         <div class="col-sm-4">
-            {% include('LouvreBundle:Order:prices.html.twig') %}
+            {% include('Default/prices.html.twig') %}
         </div>
         <div class="col-sm-8 order-ticket">
             <h3>Merci de votre commande</h3>
