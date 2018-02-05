@@ -1,0 +1,51 @@
+<html>
+<head>
+    <style>
+        table {
+            width: 800px;
+        }
+        .text-right {
+            text-align: right;
+        }
+        .text-left {
+            text-align: left;
+        }
+        .blue {
+            color: #005ce6;
+        }
+    </style>
+</head>
+<body>
+<img src="{{  absolute_url(asset('images/logo-louvre.jpg')) }}">
+<h3>Musée du Louvre</h3>
+<p>Nous vous remercions pour votre réservation. Veuillez trouver ci-dessous les détails de votre réservation.</p>
+<p>Date de votre visite : {{ order.venueDate|date('d/m/y') }} -  Type de visite : {{ order.duration.name }}</p>
+<p>Code réservation : <strong class="blue">{{ order.orderNumber }}</strong></p>
+<h4>Détail des visiteurs :</h4>
+<table>
+    <thead>
+    <tr>
+        <th class="text-left">Nom</th>
+        <th class="text-left">Tarif</th>
+        <th class="text-right">Prix</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for line in lines %}
+        <tr>
+            <td class="blue">{{ line.firstname }} {{ line.lastname }}</td>
+            <td>{{ line.rate }}</td>
+            <td class="text-right">{{ line.unit_price }}</td>
+        </tr>
+    {% endfor %}
+    <tr>
+        <td  class="text-right" colspan="2"><strong>PRIX TOTAL</strong></td>
+        <td class="text-right"><strong>{{ total|number_format(2,'.') }}</strong></td>
+    </tr>
+    </tbody>
+</table>
+<p><strong>IMPORTANT :</strong> Veuillez imprimer cet email, il sera nécessaire pour entrer au musée. N'oubliez pas
+    de prendre avec vous les cartes vous permettant de justifier du tarif réduit, si c'est le cas</p>
+<h4>Bonne visite....</h4>
+</body>
+</html>

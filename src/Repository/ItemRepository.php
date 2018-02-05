@@ -33,7 +33,7 @@ class ItemRepository extends EntityRepository
             ->addSelect('r')
             ->where('i.order = :order')
             ->setParameter('order', $order)
-            ->select( 'r.name, COUNT(i) as number, t.price as unit_price,  SUM(t.price) as total_price')
+            ->select( 'r.name as rate, COUNT(i) as number, t.price as unit_price,  SUM(t.price) as total_price, i.firstName as firstname, i.lastName as lastname')
             ->groupBy('r.name')
             ->orderBy('r.name', 'ASC')
             ->getQuery()

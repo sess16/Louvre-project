@@ -25,7 +25,7 @@ use Stripe\Error\Card;
 class OrderController extends Controller
 {
     const MAXIMUM_TICKET = 1000;
-
+    const MAXIMUM_TICKET_NUMBER_PER_DAY = 1000;
     /**
      * @return Response
      * @Route("/create", name="create")
@@ -197,13 +197,13 @@ class OrderController extends Controller
         //retrieve the amount
         $total_amount = $em->getRepository('App:Item')->getTotalAmountOfOrder($order);
         //retrieving the details of the order
-        $lines = $em->getRepository('App:Item')->getItemsDetailForTicket($order);
+        $lines = $em->getRepository('App:Item')->getItemsDataFromOrder($order);
         //creating message to send
         $message = (new \Swift_Message('Musée du Louvre : votre commande'))
             ->setFrom('tickets@lelouvre.fr')
             ->setTo($order->getCustomerEmail())
             ->setBody(
-                $this->renderView('Default/sendticket.html.twig', [
+                $this->renderView('Mail/sendticket.html.twig', [
                     'order' => $order,
                     'lines' => $lines,
                     'total' => $total_amount['total_price']

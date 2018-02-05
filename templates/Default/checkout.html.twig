@@ -1,4 +1,4 @@
-{% extends '::base.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}
     {{ parent() }} - Paiement
@@ -26,7 +26,7 @@
                 <tbody>
                 {% for line in lines %}
                     <tr>
-                        <td>{{ line.name }}</td>
+                        <td>{{ line.rate }}</td>
                         <td class="text-right">{{ line.unit_price }}</td>
                         <td class="text-right">{{ line.number }}</td>
                         <td class="text-right">{{ line.total_price }}</td>
@@ -46,7 +46,7 @@
                             data-amount="{{ stripe_amount }}"
                             data-name="Le Louvre"
                             data-description="Paiement en ligne sécurisé"
-                            data-image="{{ asset('public/images/louvre-stripe-logo-256x256.jpg') }}"
+                            data-image="{{ asset('images/louvre-stripe-logo-256x256.jpg') }}"
                             data-locale="auto"
                             data-currency="eur"
                             data-label="Paiement par carte de crédit">
