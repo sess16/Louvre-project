@@ -5,13 +5,16 @@ $(document).ready(function () {
     $('.js-venue-datepicker').datepicker({
         format: 'dd-mm-yyyy',
         language: 'fr',
-        daysOfWeekDisabled: '2',
+        daysOfWeekDisabled: ['0', '2'],
         todayHighlight: true,
         startDate: "0",
-        datesDisabled: ['01-05-2017', '01-11-2017', '25-12-2017',
-            '01-05-2018', '01-11-2018', '25-12-2018',
-            '01-05-2019', '01-11-2019', '25-12-2019'],
-        endDate: '31-12-2019',
+        datesDisabled: ['01-01-2018', '02-04-2018', '01-05-2018', '08-05-2018',
+            '10-05-2018', '21-05-2018', '14-07-2018', '15-08-2018', '01-11-2018', '11-11-2018', '25-12-2018',
+            '01-01-2019', '22-04-2019', '01-05-2019', '08-05-2019', '30-05-2019', '10-06-2019', '14-07-2019',
+            '15-08-2019', '01-11-2019', '11-11-2019', '25-12-2019', '01-01-2020', '13-04-2020', '01-05-2020',
+            '08-05-2020', '21-05-2018', '01-06-2020', '14-07-2020', '15-08-2020', '01-11-2020', '11-11-2020',
+            '25-12-2020'],
+        endDate: '31-12-2020',
         autoclose: true
     }).on('changeDate', function () {
         var minDate = $(this).datepicker('getDate') || new Date();
@@ -25,7 +28,7 @@ $(document).ready(function () {
             },
             success: function (data) {
                 var ticketLeft = data.ticketLeft;
-                if (ticketLeft < 20){
+                if (ticketLeft < 100){
                     var message = "Il ne reste ";
                     if (ticketLeft < 1){
                         message = message + "plus aucun ticket";
