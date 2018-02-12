@@ -255,9 +255,7 @@ class Order
      */
     private function generateOrderNumber(){
         //generate random 8 letters word
-        $letter = array_merge(range('a', 'z'), range('A', 'Z'));
-        shuffle($letter);
-        $word = substr(implode($letter), 0, 8);
+        $word = uniqid();
         return date_format($this->orderDate, 'ymd')
             . $word
             . date_format($this->venueDate, 'ymd');

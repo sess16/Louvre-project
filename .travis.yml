@@ -6,6 +6,8 @@ git:
 env:
 - SYMFONY_VERSION="4.0.4" DB=mysql
 before_script:
-- composer require symfony/skeleton:${SYMFONY_VERSION}
+- composer install
 script:
-- vendor/bin/phpunit
+- bin/phpunit
+notifications:
+  email: false

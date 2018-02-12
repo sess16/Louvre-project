@@ -39,6 +39,7 @@
 
 # PhpStorm
 .idea
+.env
 
 ###> symfony/web-server-bundle ###
 .web-server-pid
