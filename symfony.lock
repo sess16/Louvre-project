@@ -128,9 +128,6 @@
     "symfony/cache": {
         "version": "v3.3.13"
     },
-    "symfony/class-loader": {
-        "version": "v3.3.13"
-    },
     "symfony/config": {
         "version": "v3.3.13"
     },
