@@ -42,6 +42,8 @@ class OrderController extends Controller
             $form->handleRequest($request);
             //check data
             if ($form->isValid()){
+                dump($form->getData());
+                dump($form['order[customerEmail]']);
                 //check for number of ticket left
                 $ticketLeft = $this->ticketLeftOnDate($order->getVenueDate());
                 $message = $order->checkOrderProcessing($ticketLeft);
@@ -79,7 +81,7 @@ class OrderController extends Controller
                     );
                 }
                 $em->flush();
-                return $this->redirectToRoute('checkout_ticket',['id' => $order->getId()]);
+                #return $this->redirectToRoute('checkout_ticket',['id' => $order->getId()]);
             }
 
         }
