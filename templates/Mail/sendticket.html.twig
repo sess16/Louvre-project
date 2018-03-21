@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-<img src="{{  absolute_url(asset('images/logo-louvre.jpg')) }}">
+<img src="{{ asset('images/logo-louvre.jpg') }}">
 <h3>Musée du Louvre</h3>
 <p>Nous vous remercions pour votre réservation. Veuillez trouver ci-dessous les détails de votre réservation.</p>
 <p>Date de votre visite : {{ order.venueDate|date('d/m/y') }} -  Type de visite : {{ order.duration.name }}</p>

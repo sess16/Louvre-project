@@ -208,6 +208,11 @@ table {
     margin: 20px auto;
 }
 
+.align-blocks {
+    display: flex;
+    flex-direction: column;
+}
+
 /*
             5 - INFOS PAGE
  */
@@ -266,5 +271,13 @@ table {
         margin: 10px;
         border-radius: 4px;
         padding: 5px;
+    }
+
+    .align-blocks {
+        flex-direction: row;
+    }
+
+    .align-block {
+        margin: 10px;
     }
 }

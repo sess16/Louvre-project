@@ -26,34 +26,6 @@ class OrderControllerTest extends WebTestCase
     }
 
     /**
-     * This function checks that when a bad email is given an error
-     * is raised
-     */
-    /*public function testInvalidEmailGivenOnCreateAction()
-    {
-        $client = static::createClient();
-
-        $crawler = $client->request('GET', '/create');
-
-        //get the form to fill
-        $form = $crawler->selectButton('submit')->form();
-        $thisDate = new \DateTime('2019-02-21');
-        $form['order[venueDate]'] = date_format($thisDate, 'YYYY-mm-dd');
-        //provide a wrong email
-        $form['order[customerEmail]'] = 'falseemail';
-        $form['order[duration]']->select(1);
-        $values = $form->getPhpValues();
-        #$values['order']['items'][0]['firstName'] = "John";
-        #$values['order']['items'][0]['lastName'] = "Doe";
-        #$values['order']['items'][0]['birthDate'] = new \DateTime('1950-02-26');
-
-        $crawler = $client->submit($form);
-        //this should appear as an error message on the page
-        $this->assertEquals(200,$client->getResponse()->getStatusCode(), 'ça plante ici !');
-        $this->assertContains('Veuillez vérifier votre email.', $client->getResponse()->getContent(), 'AssertContains');
-    }
-*/
-    /**
      * This test ensure that a paid order cannot be paid again
      */
     public function testCannotPayTwiceSameOrder()

@@ -53,16 +53,18 @@
         <div class="col-sm-8 order-ticket">
             <h1>Votre billet</h1>
             {{ form_start(order) }}
-            <div class="row">
+            <div class="row blocks-group">
                 {{ form_errors(order) }}
-                <div class="col-md-4">
-                    {{ form_row(order.venueDate) }}
-                </div>
-                <div class="col-md-4">
-                    {{ form_row(order.customerEmail) }}
-                </div>
-                <div class="col-md-4">
-                    {{ form_row(order.duration) }}
+                <div class="align-blocks">
+                    <div class="align-block">
+                        {{ form_row(order.venueDate) }}
+                    </div>
+                    <div class="align-block">
+                        {{ form_row(order.customerEmail) }}
+                    </div>
+                    <div class="align-block">
+                        {{ form_row(order.duration) }}
+                    </div>
                 </div>
             </div>
             <h3>Vos Tickets</h3>
